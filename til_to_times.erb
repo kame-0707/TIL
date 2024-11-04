@@ -1,0 +1,19 @@
+n = 7.times.map{gets.chomp.to_s}
+puts "#kamerepo"
+n.each do |s|
+  s = s.delete("<br>")
+  if s.include?("《")
+    puts "### " + s
+  elsif s.include?("学習時間")
+    puts "### " + s
+  elsif s.include?("【内容】")
+    puts "### " + s
+  elsif s.include?("【所感】")
+    puts "### " + s
+  elsif s.include?("/")
+    puts s
+  else
+    puts "- " + s
+  end
+end
+
